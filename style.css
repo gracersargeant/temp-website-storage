@@ -256,9 +256,10 @@ body {
            HERO
 ========================= */
 main {
-  padding: 24px 32px;
-  max-width: 1440px;
+  with: 100%;
+  max-width: 1520px;
   margin: 0 auto;
+  padding: 24px 32px;
 }
 .hero {
   position: relative;
