@@ -1,4 +1,7 @@
-const dateElement = document.getElementById("current-date");
+/* ==================================================
+   CURRENT DATE
+================================================== */
+const currentDate = document.getElementById("current-date");
 const today = new Date ();
 const dateOptions = {
   weekday: "long",
@@ -6,7 +9,4 @@ const dateOptions = {
   month: "long",
   year: "numeric"
 };
-dateElement.textContent = today.toLocaleDateString(
-  "en-AU",
-  dateOptions
-);
+currentDate.textContent = today.toLocaleDateString("en-AU",dateOptions);
