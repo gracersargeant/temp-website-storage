@@ -4,8 +4,16 @@
 * {
   box-sizing: border-box;
 }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
+  overflow-x: hidden;
   font-family: "Segoe UI",Arial, sans-serif;
   background: #eef3f6;
   color: #1f2d3d;
@@ -20,7 +28,7 @@ body {
   min-height: 136px;
   padding: 0 0 0 48px;
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: minmax(0,1fr) 440px;
   align-items: center;
   border-bottom: 1px solid #d7e2e9;
 }
@@ -29,8 +37,9 @@ body {
 ========================= */
 .header-status {
   position: relative;
+  width: 100%;
+  min-width: 0;
   min-height: 132px;
-  min-width: 440px;
   padding: 24px 42px 20px 145px;
   display: flex;
   flex-direction: column;
@@ -138,7 +147,7 @@ body {
   font-size: 25px;
   font-weight: 700;
   color: #123b63;
-  white-space: nowrap;
+  white-space: normal;
 }
 .brand-text p {
   margin: 6px 0 0;
@@ -214,6 +223,8 @@ body {
 .nav-search {
   margin-left: auto;
   width: 270px;
+  max-width: 270px;
+  min-width: 180px;
   height: 38px;
   display: flex;
   align-items: center;
@@ -256,9 +267,10 @@ body {
            HERO
 ========================= */
 main {
-  padding: 24px 32px;
-  max-width: 1440px;
+  width: 100%;
+  max-width: 1520px;
   margin: 0 auto;
+  padding: 24px 32px;
 }
 .hero {
   position: relative;
@@ -625,7 +637,7 @@ main {
 ========================= */
 .announcement-card {
   margin-top: 20px;
-  padding: 20px;
+  padding: 18px 20px;
   min-height: 108px;
   display: flex;
   align-items: center;
@@ -643,18 +655,17 @@ main {
   flex-shrink: 0;
   background: #eaf5fa;
   border-radius: 50%;
-  font-size: 20px;
 }
 .announcement-card h3 {
   margin: 0;
   font-size: 16px;
+  line-height: 1.2;
   color: #123b63;
-  max-width: 260px;
 }
 .announcement-card p {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.45;
   color:#667784;
   }
 .announcement-card > div:last-child{
@@ -687,23 +698,74 @@ main {
   margin-left: 11px;
   color: #6f94ab;
 }
-@media (max-width: 900px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-  }
-  .quick-access-grid,
-  .latest-grid {
-    grid-template-columns: 1fr;
-  }
-  .header-top {
-    padding: 18px 24px;
-  }
-  .main-nav {
-    padding: 0 24px;
-  }
-  main {
-    padding: 20px;
-  }
+@media (max-width: 1200px) {
+.header-top {
+   grid-template-columns: minmax(0,1fr) 380px;
+   padding-left: 28px;
+ }
+.header-status {
+  padding: 24px 24px 20px 115px;
+}
+.band-area {
+  gap: 14px;
+  padding-right: 20px;
+}
+.site-logo {
+  width: 66px;
+  height: 66px;
+}
+.brand-text h1 {
+  font-size: 21px;
+}
+.brand-text p {
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+.main-nav a {
+  padding: 0 16px;
+  font-size: 13px;
+}
+}
+.nav-search {
+  width: 220px;
+  min-width: 160px;
+}
+@media (max-width: 1000px) {
+.header-top {
+  grid-template-colums: 1fr;
+  padding: 20px 24px 0;
+}
+.band-area {
+  padding: 0 0 18px;
+}
+.header-status {
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  min-height: auto;
+  padding: 22px 28px;
+  clip-path: none;
+}
+.header-status::before,
+.header-status::after {
+  display: none;
+}
+.header-values {
+  padding-left: 52px;
+  flex-wrap: wrap;
+}
+.main-nav {
+  flex-wrap: wrap;
+  padding: 0 16px 12px;
+}
+.main-nav a {
+  height: 54px;
+}
+.nav-search {
+  order: 10;
+  width: 100%;
+  max-width: none;
+  margin: 8px 0 0;
+}
 }
 /* =========================
           VISUAL POLISH
