@@ -106,17 +106,18 @@ body {
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 7px;
   padding-left: 52px;
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 600;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
   text-transform: uppercase;
   color: #d0e3ee;
 }
 .header-values span:not(:last-child)::after {
   content: "|";
-  margin-left: 10px;
+  margin-left: 7px;
   color: #6e9bb7;
 }
 .header-icon {
@@ -704,7 +705,7 @@ main {
    padding-left: 28px;
  }
 .header-status {
-  padding: 24px 24px 20px 115px;
+  padding: 24px 12px 20px 115px;
 }
 .band-area {
   gap: 14px;
