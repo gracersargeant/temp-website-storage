@@ -10,3 +10,9 @@ const dateOptions = {
   year: "numeric"
 };
 currentDate.textContent = today.toLocaleDateString("en-AU",dateOptions);
+/*------------*/
+const widthTest = document.getElementById("width-test");
+widthTest.textContent = 'Viewport: ${window.innerWidth}px';
+window.addEventListener("resize",()=>{
+   widthTest.textContent = 'Viewport:${window.innerWidth}px';
+});
