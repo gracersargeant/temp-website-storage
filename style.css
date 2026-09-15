@@ -108,7 +108,7 @@ body {
   height: 27px;
   fill: none;
   stroke: var(--background-white);
-  stroke-width: 1.8;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -426,18 +426,18 @@ body {
 .upcoming-card {
   min-height: 118px;
   margin-top: 20px;
-  padding: 18px 20px;
+  padding: 16px 18px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   background: var(--blue-pale);
   border: 1px solid var(--border);
   border-radius: var(--radius-small);
 }
 .event-date {
-  width: 64px;
-  min-width: 64px;
-  padding: 10px 6px;
+  width: 58px;
+  min-width: 58px;
+  padding: 9px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -493,4 +493,162 @@ body {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+/* ==================================================
+   LATEST INFORMATION
+================================================== */
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+.info-card {
+  min-height: 118px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--background-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+}
+.info-card-content {
+  min-width: 0;
+}
+.info-card-content h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--blue-primary);
+}
+.info-card-content p {
+  margin: 6px 0 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+.info-card-content a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue-mid);
+  text-decoration: none;
+}
+/* ==================================================
+   ANNOUNCEMENT
+================================================== */
+.announcement-card {
+  min-height: 132px;
+  margin-top: 20px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--background-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+}
+.announcement-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--blue-pale);
+  border-radius: 50%;
+}
+.announcement-megaphone {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--blue-mid);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round; 
+}
+.announcement-content {
+  flex: 1;
+  min-width: 0;
+}
+.announcement-content h3 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--blue-primary);
+}
+.announcement-content p {
+  max-width: 520px;
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 1100px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==================================================
+   FOOTER
+================================================== */
+.site-footer {
+  width: 100%;
+  margin-top: 24px;
+  background: var(--blue-dark);
+  color: var(--background-white);
+}
+.footer-inner {
+  width: 100%;
+  max-width: var(--content-width);
+  min-height: 110px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.footer-brand span {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+.footer-brand p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.footer-values {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.footer-values span:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: #6f94ab;
+}
+.footer-copy {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-light);
+}
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+@media (max-width: 1000px){
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
 }
