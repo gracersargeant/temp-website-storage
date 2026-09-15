@@ -420,3 +420,77 @@ body {
   color: var(--blue-mid);
   text-decoration: none;
 }
+/* ==================================================
+   UPCOMING
+================================================== */
+.upcoming-card {
+  min-height: 118px;
+  margin-top: 20px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--blue-pale);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+}
+.event-date {
+  width: 64px;
+  min-width: 64px;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-white);
+  border-radius: var(--radius-small);
+}
+.event-date span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.event-date strong {
+  margin: 2px 0;
+  font-size: 27px;
+  line-height: 1;
+  color: var(--blue-mid);
+}
+.event-details {
+  flex: 1;
+  min-width: 0;
+}
+.event-details h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--blue-primary);
+}
+.event-details p {
+  margin: 6px 0 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+.event-location {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.event-arrow {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.event-arrow svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--blue-mid);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
